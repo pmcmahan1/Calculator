@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Scientific Calculator LCD', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: bold;
 }
 
@@ -10,8 +10,35 @@ body {
     background-color: lightgray;
 }
 
+a {
+    padding-left: 10px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #333333;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
 .container-grid {
     display: grid;
+    grid-gap: 10px;
+    background-color: black;
     justify-content: center;
     align-content: center;
     min-height: 100vh;
@@ -20,15 +47,30 @@ body {
 }
 
 .container-grid > button {
+    border: 1px;
+    border-radius: 50%;
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
     outline: none;
-    background-color: darkgray;
+}
+
+.operand {
+    background-color: orange;
+    color: white;
+}
+
+.number {
+    background-color: #333333;
+    color: white;
+}
+
+.erase {
+    background-color: lightgray;
+    color: black;
 }
 
 .container-grid > button:hover {
-    background-color: white;
+    filter: brightness(150%);
 }
 
 .span-two {
@@ -42,7 +84,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-around;
-    padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
 }
